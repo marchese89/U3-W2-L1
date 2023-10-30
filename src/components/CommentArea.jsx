@@ -9,7 +9,9 @@ class CommentArea extends Component {
     error: false,
   };
   componentDidMount() {
-    this.getComments();
+    if (this.props.selectedBook != null) {
+      this.getComments();
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
