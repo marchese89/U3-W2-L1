@@ -1,6 +1,7 @@
 import { Component } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { token } from "../token";
 class AddComment extends Component {
   state = {
     comment: {
@@ -28,8 +29,7 @@ class AddComment extends Component {
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTNhNGFkZmY2ZTNkZDAwMTQ5NWU0MzMiLCJpYXQiOjE2OTgzMTkwNzEsImV4cCI6MTY5OTUyODY3MX0.6OiHMcwB71-jL1waCDYllDV5ONJ4nMJocBRyTYVP518",
+            Authorization: `Bearer ${token}`,
           },
           method: "POST",
           body: JSON.stringify(this.state.comment),

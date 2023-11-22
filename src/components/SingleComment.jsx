@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { ListGroup, Button } from "react-bootstrap";
 import { Trash3Fill } from "react-bootstrap-icons";
+import { token } from "../token";
 class SingleComment extends Component {
   render() {
     return (
@@ -21,8 +22,7 @@ class SingleComment extends Component {
                 {
                   headers: {
                     "Content-Type": "application/json",
-                    Authorization:
-                      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTNhNGFkZmY2ZTNkZDAwMTQ5NWU0MzMiLCJpYXQiOjE2OTgzMTkwNzEsImV4cCI6MTY5OTUyODY3MX0.6OiHMcwB71-jL1waCDYllDV5ONJ4nMJocBRyTYVP518",
+                    Authorization: `Bearer ${token}`,
                   },
                   method: "DELETE",
                 }

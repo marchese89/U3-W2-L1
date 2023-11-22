@@ -2,6 +2,7 @@ import { Component } from "react";
 import CommentList from "./CommentsList";
 import AddComment from "./AddComment";
 import Error from "./Error";
+import { token } from "../token";
 
 class CommentArea extends Component {
   state = {
@@ -27,8 +28,7 @@ class CommentArea extends Component {
           this.props.selectedBook,
         {
           headers: {
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTNhNGFkZmY2ZTNkZDAwMTQ5NWU0MzMiLCJpYXQiOjE2OTgzMTkwNzEsImV4cCI6MTY5OTUyODY3MX0.6OiHMcwB71-jL1waCDYllDV5ONJ4nMJocBRyTYVP518",
+            Authorization: `Bearer ${token}`,
           },
         }
       );
